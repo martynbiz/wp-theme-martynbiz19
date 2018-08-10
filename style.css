@@ -4779,18 +4779,13 @@ body {
   position: relative;
 }
 
-.c-header-nav--primary li:last-child {
-  margin: 0;
-}
-
-.c-header-nav--primary a {
+.c-header-nav--primary li a {
   font-weight: 700;
 }
 
-.c-header-nav--primary a:after {
+.c-header-nav--primary li a:after {
   content: '';
   position: absolute;
-  background-color: #767676;
   height: 8px;
   width: 0;
   left: 0;
@@ -4800,7 +4795,24 @@ body {
   /* easeOutQuart */
 }
 
-.c-header-nav--primary a:hover:after {
+.c-header-nav--primary li a:after {
+  background-color: #767676;
+}
+
+.c-header-nav--primary li a:hover:after {
+  width: 100%;
+}
+
+.c-header-nav--primary li:last-child {
+  margin: 0;
+}
+
+.c-header-nav--primary li.current-menu-parent a:after,
+.c-header-nav--primary li.current-post-parent a:after {
+  width: 100%;
+}
+
+.c-header-nav--primary li.current-menu-item a:after {
   width: 100%;
 }
 

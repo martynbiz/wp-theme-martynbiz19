@@ -57,15 +57,14 @@ suppost all Wordpress types (posts, comments, etc).
 
 
 TODO
+* masonry
 * https://codex.wordpress.org/Theme_Development
-* search
 * responsive
 * theme versions ?
 * social media links in single
+* contact page
+* about me page
 * footer
 * final screenshot
-* fix scss lint
-* masonry
-
-Before activating live:
-* are images displaying correctly (not using placeholder)
+* category description
+* comments

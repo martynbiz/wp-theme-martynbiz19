@@ -54,52 +54,17 @@
                     </nav>
                 </div>
             </div>
-            <!-- Search -->
-            <!-- <form id="header-search" class="c-header-search" aria-hidden="true" aria-label="Popup for site search field" method="get" action="/s/search.html" data-js-action="/search/">
-                <input type="hidden" name="collection" value="external">
-                <input type="hidden" name="meta_group_not" value="internal">
-                <div class="overlay"></div>
-                <div class="content">
-                    <div class="grid-container">
-                        <div class="grid-x">
-                            <div class="small-12 small-12 cell c-header-search__input-wrapper">
-                                <label class="show-for-sr" for="header-search__query">Site search</label>
-                                <input type="text" name="query" id="header-search__query" class="c-header-search__query" for="header-search__query" autocomplete="off" placeholder="Site search">
-                                <button class="button no-arrow" type="submit">
-                                <span class="show-for-sr">Submit</span>
-                                <span class="uos-magnifying-glass"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="u-bg-grey">
-                        <div class="grid-container">
-                            <div class="grid-x">
-                                <div class="small-12 small-12 cell u-relative">
-                                    <div id="header-search__wrapper" class="c-header-search__wrapper hide-for-small-only" aria-hidden="true">
-                                        <div id="header-search__results" class="grid-x c-header-search__results"></div>
-                                        <div id="header-search__loading" class="c-search-loading">
-                                            <div class="c-search-loading__spinner"></div>
-                                            <span class="show-for-sr">Loading...</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form> -->
         </header>
 
-        <section class="grid-x c-masthead" aria-label="masthead-14193">
-            <div class="cell large-12">
-                <div class="c-masthead__image" style="background-image: url('<?php is_single() ? the_post_thumbnail_url() : header_image(); ?>')"></div>
-                <?php if ( ! is_front_page() ): ?>
+        <?php if ( ! is_front_page() ): ?>
+            <section class="grid-x c-masthead" aria-label="masthead-14193">
+                <div class="cell large-12">
+                    <div class="c-masthead__image" style="background-image: url('<?php is_single() ? the_post_thumbnail_url() : header_image(); ?>')"></div>
                     <div class="grid-container grid-x grid-padding-x c-masthead__container">
                         <h1 class="c-masthead__callout-text u-callout-text u-text-uppercase"><?php wp_title(''); ?></h1>
                         <div class="c-masthead__button-group button-group grid-container">
                         </div>
                     </div>
-                <?php endif; ?>
-            </div>
-        </section>
+                </div>
+            </section>
+        <?php endif; ?>
