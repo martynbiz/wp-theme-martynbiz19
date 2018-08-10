@@ -1,0 +1,552 @@
+/*
+Theme Name: Martynbiz19
+Theme URI: https://github.com/martynbiz/wp-theme-martynbiz19
+Description: Wordpress theme 2019
+Version: 1.0
+*/
+
+// CUSTOM
+@charset 'utf-8';
+
+
+
+
+// Dependencies
+@import '../_vendor/normalize-scss/sass/normalize';
+@import '../_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '../_vendor/sassy-lists/stylesheets/helpers/true';
+@import '../_vendor/sassy-lists/stylesheets/functions/purge';
+@import '../_vendor/sassy-lists/stylesheets/functions/remove';
+@import '../_vendor/sassy-lists/stylesheets/functions/replace';
+@import '../_vendor/sassy-lists/stylesheets/functions/to-list';
+
+// CUSTOM
+@import 'scss/settings';
+// @import 'foundation';
+@import 'motion-ui';
+
+// Sass utilities
+@import 'util/util';
+
+// Global variables and styles
+@import 'global';
+
+// Components
+@import 'grid/grid';
+@import 'xy-grid/xy-grid';
+@import 'typography/typography';
+@import 'forms/forms';
+@import 'components/visibility';
+@import 'components/float';
+@import 'components/button';
+// @import 'components/button-group';
+// @import 'components/accordion-menu';
+@import 'components/accordion';
+@import 'components/badge';
+@import 'components/breadcrumbs';
+@import 'components/callout';
+// @import 'components/card';
+@import 'components/close-button';
+// @import 'components/drilldown';
+// @import 'components/dropdown-menu';
+@import 'components/dropdown';
+@import 'components/flex';
+@import 'components/responsive-embed';
+// @import 'components/label';
+@import 'components/media-object';
+@import 'components/menu';
+@import 'components/menu-icon';
+// @import 'components/off-canvas';
+@import 'components/orbit';
+@import 'components/pagination';
+// @import 'components/progress-bar';
+@import 'components/reveal';
+@import 'components/slider';
+@import 'components/sticky';
+// @import 'components/switch';
+@import 'components/table';
+@import 'components/tabs';
+// @import 'components/title-bar';
+// @import 'components/top-bar';
+// @import 'components/thumbnail';
+// @import 'components/tooltip';
+@import 'prototype/prototype';
+
+@mixin foundation-everything(
+  $flex: true,
+  $prototype: false
+) {
+  @if $flex {
+    $global-flexbox: true !global;
+  }
+  @include foundation-global-styles;
+  @if not $flex {
+    @include foundation-grid;
+  } @else {
+    @if $xy-grid {
+      @include foundation-xy-grid-classes;
+    }
+    @else {
+      @include foundation-flex-grid;
+    }
+  }
+  @include foundation-typography;
+  @include foundation-forms;
+  @include foundation-button;
+  @include foundation-accordion;
+  // @include foundation-accordion-menu;
+  @include foundation-badge;
+  @include foundation-breadcrumbs;
+  // @include foundation-button-group;
+  @include foundation-callout;
+  // @include foundation-card;
+  @include foundation-close-button;
+  @include foundation-menu;
+  @include foundation-menu-icon;
+  // @include foundation-drilldown-menu;
+  @include foundation-dropdown;
+  // @include foundation-dropdown-menu;
+  @include foundation-responsive-embed;
+  // @include foundation-label;
+  @include foundation-media-object;
+  // @include foundation-off-canvas;
+  @include foundation-orbit;
+  @include foundation-pagination;
+  // @include foundation-progress-bar;
+  @include foundation-slider;
+  @include foundation-sticky;
+  @include foundation-reveal;
+  // @include foundation-switch;
+  @include foundation-table;
+  @include foundation-tabs;
+  // @include foundation-thumbnail;
+  // @include foundation-title-bar;
+  // @include foundation-tooltip;
+  // @include foundation-top-bar;
+  @include foundation-visibility-classes;
+  @include foundation-float-classes;
+  @include motion-ui-transitions;
+  @if $flex {
+    @include foundation-flex-classes;
+  }
+
+  @if $prototype {
+    @include foundation-prototype-classes;
+  }
+}
+
+
+// CUSTOM...
+
+@include foundation-everything;
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: #eee;
+}
+
+
+.c-header {
+    background-color: #FFFFFF;
+    padding: 34px 0;
+    position: relative;
+}
+// .c-site-logo {
+//     max-width: 317px;
+//     max-height: 79px;
+// }
+
+$container-bg-color: #f6f5f1;
+
+// .mb18-header {
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+//     padding-top: 20px;
+//     padding-bottom: 15px;
+//     // background: darken($container-bg-color, 3%);
+// }
+
+// .mb18-container {
+//     // background: $container-bg-color;
+//     // border-top: 5px solid #2074e7;
+//     // padding: 20px 0;
+//     // border-radius: 3px;
+//     // box-shadow: 0 0 30px rgba(0,0,0,0.1);
+// }
+
+.mb18-heading__wrapper {
+    display: inline-block;
+    white-space: nowrap;
+    color: #4a535f;
+
+    img {
+        float: left;
+        margin-right: 15px;
+    }
+
+    &:hover {
+        color: lighten(#4a535f, 10%);
+    }
+}
+
+.mb18-heading__desc {
+    font-weight: normal;
+    color: #4a535f;
+}
+
+.mb18-heading {
+    position: relative;
+    // top: .125em;
+    font: bold 1.625em 'Ruda','Segoe UI','Calibri','Trebuchet MS',Helvetica,Verdana,sans-serif;
+    line-height: .875em;
+
+    .mb18-heading__hl {
+        color: #2074e7;
+    }
+}
+
+.c-header-nav {
+    margin: 0;
+
+    li {
+        display: inline-block;
+    }
+    a {
+        font-size: 22px;
+        position: relative;
+    }
+}
+
+.c-header-nav--primary {
+
+    li {
+        margin: 0 32px 0 0;
+        position: relative;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    a {
+        font-weight: 700;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: map-get($foundation-palette, secondary);
+            height: 8px;
+            width: 0;
+            left: 0;
+            bottom: -19px;
+            transition: width 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+        }
+
+        &:hover:after {
+            width: 100%;
+        }
+    }
+}
+
+.c-header-nav--secondary {
+    margin: 0 0 14px 0;
+
+    li {
+        margin: 0 18px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    a {
+        color: #3A3C39;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+.post {
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.post__header {
+    position: relative;
+    padding: 8% 10%;
+    border-bottom: 1px solid #eee;
+    color: $black;
+}
+
+.post__title {
+    line-height: 120%;
+    word-break: break-word;
+    font-family: "FSMaja", serif;
+    color: $black;
+    font-weight: 700;
+}
+
+.post__header:before, .post__header:before {
+    content: "";
+    display: block;
+    border: 12px solid transparent;
+    border-top-color: #eee;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 10%;
+    margin-bottom: -24px;
+}
+
+.post__header:after, .post__header:after {
+    content: "";
+    display: block;
+    border: 11px solid transparent;
+    border-top-color: #fff;
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+    left: 10%;
+    margin-left: 1px;
+    margin-bottom: -21px;
+}
+
+.post__image {
+    a {
+        overflow: hidden;
+    }
+
+    img {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.post__body {
+    font-size: 1.1em;
+    color: $black;
+    line-height: 150%;
+    padding: 10%;
+
+    .more-link {
+        display: block;
+        margin-top: 1.1em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "FSMaja", serif;
+    }
+}
+
+.post__date {
+    background: #eee;
+    padding: 0 10%;
+
+    .post-date {
+        display: block;
+        color: #999;
+        font-size: 0.8em;
+        font-weight: 700;
+        padding: 20px 0px 20px 24px;
+        background: no-repeat left center;
+        background-size: 18px auto;
+        background-image: url('https://blog.stir.ac.uk/wp-content/themes/baskerville/images/icons/2x/clock-g.png');
+        margin-left: 0;
+    }
+}
+
+.post-list {
+    position: relative;
+    overflow: hidden;
+
+    .post__title {
+        font-size: 1.25em;
+    }
+
+    .post__body {
+        font-size: 0.95em;
+        color: #666;
+    }
+}
+
+.post-single {
+    .post__title {
+        font-size: 3em;
+    }
+}
+
+
+/*
+sidebar
+*/
+
+.sidebar {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+
+/*
+widgets
+*/
+
+.widget {
+    padding: 30px 15px;
+    position: relative;
+}
+
+.widget_search {
+
+    input[name='s'] {
+        display: block;
+        width: 100%;
+        padding: 16px 55px 16px 20px;
+        border: none;
+        margin: 0;
+        background: #ddd;
+        color: #fff;
+        border-radius: 3px;
+        font-size: 0.9em;
+        -webkit-font-smoothing: antialiased;
+        color: $black;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    input[type='submit'] {
+        display: block;
+        height: 36px;
+        width: 36px;
+        border: none;
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        text-indent: -9999px;
+        background: url('https://blog.stir.ac.uk/wp-content/themes/baskerville/images/icons/1x/spyglass-g.png') no-repeat center;
+        background-size: 24px auto;
+    }
+}
+
+.widget_recent_entries {
+    border-top: 1px solid #EEE;
+}
+
+.widget_categories {
+    border-top: 1px solid #EEE;
+}
+
+.widget-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: $black;
+}
+
+
+
+.u-padding-y {
+    padding: 30px 0;
+}
+
+.u-margin-y {
+    margin: 30px 0;
+}
+
+
+
+
+/***
+ Masthead
+***/
+.c-masthead {
+    overflow: hidden;
+    position: relative;
+}
+.c-masthead__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-height: 689px;
+    min-height: 489px;
+    position: relative;
+}
+.c-masthead__image:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.c-masthead__container {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+    z-index: 1;
+}
+.c-masthead__callout-text {
+    color: #FFFFFF;
+    padding: 20px 20px 20px 0;
+    line-height: 85%;
+    margin: 0;
+    position: relative;
+    font-family: "FSMaja",serif;
+    font-size: 90px;
+    text-transform: uppercase;
+}
+.c-masthead__callout-text:after {
+    content: '';
+    position: absolute;
+    height: 31px;
+    bottom: 0;
+    right: 0;
+    width: 9999px;
+    border-right: 7px solid $white;
+    border-bottom: 7px solid $white;
+}
+@media screen and #{breakpoint(xlarge down)} {
+    .c-masthead__image {
+        min-height: 500px;
+        max-height: initial;
+    }
+    .c-masthead .c-masthead__callout-text {
+        font-size: 72px;
+    }
+}
+@media screen and #{breakpoint(small down)} {
+    .c-masthead__image {
+        min-height: 256px;
+        max-height: initial;
+    }
+    .c-masthead .c-masthead__container {
+        bottom: 0;
+        padding: 0 15px 20px;
+        position: relative;
+        margin: 0;
+    }
+    .c-masthead .c-masthead__callout-text {
+        color: map-get($foundation-palette, primary);
+        font-size: 51px;
+    }
+    .c-masthead .c-masthead__callout-text:after {
+        border-right: 6px solid map-get($foundation-palette, primary);
+        border-bottom: 6px solid map-get($foundation-palette, primary);
+    }
+}
+@media screen and (max-width: 500px) {
+    .c-masthead .c-masthead__callout-text {
+        font-size: 40px;
+    }
+}
