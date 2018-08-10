@@ -4883,6 +4883,11 @@ body {
   margin-bottom: -21px;
 }
 
+.post__image {
+  max-height: 200px;
+  overflow: hidden;
+}
+
 .post__image a {
   overflow: hidden;
 }

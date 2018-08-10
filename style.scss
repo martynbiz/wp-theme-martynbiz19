@@ -338,6 +338,9 @@ $container-bg-color: #f6f5f1;
 }
 
 .post__image {
+    max-height: 200px;
+    overflow: hidden;
+
     a {
         overflow: hidden;
     }
