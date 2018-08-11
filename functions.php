@@ -43,7 +43,10 @@ function uos_layout_theme_enqueue_styles() {
 	}
 
 	// brand fonts
-	wp_enqueue_style( 'uos_gfonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' );
+	// wp_enqueue_style( 'uos_gfonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' );
+
+	//
+	wp_enqueue_style( 'uos_gfonts',  '//fonts.googleapis.com/css?family=Acme|Anton|Gloria+Hallelujah|Indie+Flower|Jua|Kaushan+Script|Lobster|Pacifico|Patrick+Hand|Ultra' );
 
 }
 

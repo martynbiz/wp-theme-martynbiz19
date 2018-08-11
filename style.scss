@@ -192,13 +192,16 @@ $container-bg-color: #f6f5f1;
 .mb18-heading__desc {
     font-weight: normal;
     color: #4a535f;
+    margin-top: 5px;
+    color: #999;
+    font-family: "Gloria Hallelujah", serif; //Indie Flower|Gloria Hallelujah|Jua|
 }
 
 .mb18-heading {
     position: relative;
     // top: .125em;
-    font: bold 1.625em 'Ruda','Segoe UI','Calibri','Trebuchet MS',Helvetica,Verdana,sans-serif;
-    line-height: .875em;
+    font: bold 1.625em 'Kaushan Script','Segoe UI','Calibri','Trebuchet MS',Helvetica,Verdana,sans-serif;
+    line-height: .875em; //|Lobster|Pacifico|Patrick+Hand|Ultra
 
     .mb18-heading__hl {
         color: #2074e7;
@@ -207,6 +210,7 @@ $container-bg-color: #f6f5f1;
 
 .c-header-nav {
     margin: 0;
+    font-family: "Gloria Hallelujah", serif; //Indie Flower|Gloria Hallelujah|Jua|
 
     li {
         display: inline-block;
@@ -305,9 +309,9 @@ $container-bg-color: #f6f5f1;
 }
 
 .post__title {
-    line-height: 120%;
-    word-break: break-word;
-    font-family: "FSMaja", serif;
+    // line-height: 120%;
+    // word-break: break-word;
+    font-family: "Gloria Hallelujah", serif; //Indie Flower|Gloria Hallelujah|Jua|
     color: $black;
     font-weight: 700;
 }
@@ -389,7 +393,7 @@ $container-bg-color: #f6f5f1;
     overflow: hidden;
 
     .post__title {
-        font-size: 1.25em;
+        font-size: 1.5em;
     }
 
     .post__body {
@@ -526,7 +530,7 @@ widgets
     line-height: 85%;
     margin: 0;
     position: relative;
-    font-family: "FSMaja",serif;
+    // font-family: "Gloria Hallelujah", serif; //Indie Flower|Gloria Hallelujah|Jua|
     font-size: 90px;
     text-transform: uppercase;
 }

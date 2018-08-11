@@ -4749,11 +4749,14 @@ body {
 .mb18-heading__desc {
   font-weight: normal;
   color: #4a535f;
+  margin-top: 5px;
+  color: #999;
+  font-family: "Gloria Hallelujah", serif;
 }
 
 .mb18-heading {
   position: relative;
-  font: bold 1.625em 'Ruda','Segoe UI','Calibri','Trebuchet MS',Helvetica,Verdana,sans-serif;
+  font: bold 1.625em 'Kaushan Script','Segoe UI','Calibri','Trebuchet MS',Helvetica,Verdana,sans-serif;
   line-height: .875em;
 }
 
@@ -4763,6 +4766,7 @@ body {
 
 .c-header-nav {
   margin: 0;
+  font-family: "Gloria Hallelujah", serif;
 }
 
 .c-header-nav li {
@@ -4849,9 +4853,7 @@ body {
 }
 
 .post__title {
-  line-height: 120%;
-  word-break: break-word;
-  font-family: "FSMaja", serif;
+  font-family: "Gloria Hallelujah", serif;
   color: #2B3542;
   font-weight: 700;
 }
@@ -4941,7 +4943,7 @@ body {
 }
 
 .post-list .post__title {
-  font-size: 1.25em;
+  font-size: 1.5em;
 }
 
 .post-list .post__body {
@@ -5072,7 +5074,6 @@ widgets
   line-height: 85%;
   margin: 0;
   position: relative;
-  font-family: "FSMaja",serif;
   font-size: 90px;
   text-transform: uppercase;
 }
