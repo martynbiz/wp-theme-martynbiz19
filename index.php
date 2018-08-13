@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
 <section class="grid-container u-padding-y">
-    <div class="grid-x grid-padding-x" data-masonry='{ "itemSelector": ".cell" }'>
+    <div class="grid-x grid-padding-x post-list-container">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <div class="small-12 medium-6 large-4 cell">
+            <div class="small-12 medium-6 large-4 cell post-list-item">
                 <article id="post-<?php the_ID(); ?>" <?php post_class('post-list box-style'); ?> itemscope itemtype="http://schema.org/Article">
                     <div class="post__header">
                         <h1 class="post__title">
