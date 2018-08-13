@@ -57,7 +57,6 @@ suppost all Wordpress types (posts, comments, etc).
 
 
 TODO
-* masonry
 * https://codex.wordpress.org/Theme_Development
 * responsive
 * theme versions ?
@@ -65,6 +64,7 @@ TODO
 * contact page
 * about me page
 * footer
-* final screenshot
 * category description
 * comments
+* make banner title more readable
+* page.php - needs to have a white box rather than text on grey bg 
