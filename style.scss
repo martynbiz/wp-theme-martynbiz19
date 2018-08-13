@@ -406,6 +406,14 @@ $container-bg-color: #f6f5f1;
     .post__title {
         font-size: 3em;
     }
+
+    // this is used for code inserts
+    pre {
+        background: #eee;
+        border: none;
+        padding: 15px;
+        margin-bottom: 1rem;
+    }
 }
 
 

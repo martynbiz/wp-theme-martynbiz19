@@ -4955,6 +4955,13 @@ body {
   font-size: 3em;
 }
 
+.post-single pre {
+  background: #eee;
+  border: none;
+  padding: 15px;
+  margin-bottom: 1rem;
+}
+
 /*
 sidebar
 */

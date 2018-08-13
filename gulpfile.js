@@ -2,7 +2,6 @@
  * @see https://www.cssigniter.com/use-sass-gulp-wordpress-theme-plugin-development-workflow/
  */
 
-
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const sass = require('gulp-sass');
@@ -10,8 +9,6 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const groupmq = require('gulp-group-css-media-queries');
-// const bs = require('browser-sync');
-// const sassLint = require('gulp-sass-lint');
 const concat = require('gulp-concat');
 
 const SASS_SOURCES = [
@@ -41,7 +38,6 @@ const SCRIPTS = [
 /**
  * Compile Sass files
  */
-// gulp.task('compile:sass', ['lint:sass'], () =>
 gulp.task('compile:sass', [], () =>
   gulp.src(SASS_SOURCES, { base: './' })
     .pipe(plumber()) // Prevent termination on error
@@ -59,51 +55,25 @@ gulp.task('compile:sass', [], () =>
     ]))
     .pipe(groupmq()) // Group media queries!
     .pipe(gulp.dest('.'))); // Output compiled files in the same dir as Sass sources
-    // .pipe(bs.stream())); // Stream to browserSync
 
 gulp.task('compile:js', [], () =>
   gulp.src(SCRIPTS)
     .pipe(concat('script.js')) // combine js files
     .pipe(gulp.dest('./')));
 
-// // Task for compiling scripts, and minifying. Run with 'gulp js'
-// gulp.task('js', function() {
-//
-//     return gulp.src(scripts)
-//         .pipe(concat('app.js')) // combine js files
-//         .pipe(gulp.dest('dist/js'));
-// });
-
 /**
- * Start up browserSync and watch Sass files for changes
+ * Watch Sass files for changes
  */
 gulp.task('watch:sass', ['compile:sass'], () => {
-  // bs.init({
-  //   proxy: 'http://localhost/wordpress-installation'
-  // });
-
-  gulp.watch(SASS_SOURCES, ['compile:sass']); //, 'lint:sass']);
+    gulp.watch(SASS_SOURCES, ['compile:sass']); //, 'lint:sass']);
 });
 
 /**
- * Start up browserSync and watch Js files for changes
+ * Watch Js files for changes
  */
 gulp.task('watch:js', ['compile:js'], () => {
-  // bs.init({
-  //   proxy: 'http://localhost/wordpress-installation'
-  // });
-
-  gulp.watch(JS_SOURCES, ['compile:js']);
+    gulp.watch(JS_SOURCES, ['compile:js']);
 });
-
-// /**
-//  * Lint Sass
-//  */
-// gulp.task('lint:sass', () =>
-//   gulp.src(SASS_SOURCES)
-//     .pipe(plumber()));
-//     // .pipe(sassLint())
-//     // .pipe(sassLint.format()));
 
 /**
  * Default task executed by running `gulp`
