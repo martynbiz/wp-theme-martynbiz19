@@ -33,6 +33,8 @@ const SCRIPTS = [
     'bower_components/jquery/dist/jquery.js',
     'bower_components/what-input/dist/what-input.js',
     'bower_components/foundation-sites/dist/js/foundation.js',
+    'bower_components/imagesloaded/imagesloaded.pkgd.js',
+    'bower_components/masonry-layout/dist/masonry.pkgd.js',
     'js/app.js' // this should be last
 ];
 
