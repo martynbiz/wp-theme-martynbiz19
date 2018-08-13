@@ -5,11 +5,13 @@
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="small-12 medium-8 cell">
                 <article id="post-<?php the_ID(); ?>" <?php post_class('post-single box-style'); ?> role="article" itemscope itemtype="http://schema.org/Article">
-                    <!-- <div class="post__header">
-                        <h2 class="post__title">
-                            <?php the_title(); ?>
-                        </h2>
-                    </div> -->
+                    <?php if ( ! has_post_thumbnail() ): ?>
+                        <div class="post__header">
+                            <h2 class="post__title">
+                                <?php the_title(); ?>
+                            </h2>
+                        </div>
+                    <?php endif; ?>
                     <div class="post__image">
                         <!-- <img src="http://www.triplethreatracing.org/wp-content/uploads/2016/05/placeholder-3.png" alt=""> -->
                         <?php //echo wp_get_attachment_image( $post->ID, 'post-image' ); ?>

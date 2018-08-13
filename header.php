@@ -56,15 +56,17 @@
             </div>
         </header>
 
-        <?php if ( ! is_front_page() ): ?>
+        <?php if ( !is_front_page() and ( has_header_image() or ( is_single() and has_post_thumbnail() ) ) ): ?>
             <section class="grid-x c-masthead" aria-label="masthead-14193">
                 <div class="cell large-12">
                     <div class="c-masthead__image" style="background-image: url('<?php is_single() ? the_post_thumbnail_url() : header_image(); ?>')"></div>
-                    <div class="grid-container grid-x grid-padding-x c-masthead__container">
-                        <h1 class="c-masthead__callout-text u-callout-text u-text-uppercase"><?php wp_title(''); ?></h1>
-                        <div class="c-masthead__button-group button-group grid-container">
+                    <?php if ( ! is_front_page() ): ?>
+                        <div class="grid-container grid-x grid-padding-x c-masthead__container">
+                            <h1 class="c-masthead__callout-text u-callout-text u-text-uppercase"><?php wp_title(''); ?></h1>
+                            <div class="c-masthead__button-group button-group grid-container">
+                            </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </section>
         <?php endif; ?>
