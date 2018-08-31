@@ -13,7 +13,7 @@ get_header(); ?>
 
 <main id="main" class="site-main" role="main">
 	<div class="grid-container u-padding-y">
-		<div class="grid-x grid-padding-x">
+		<div class="grid-x grid-padding-x page">
 			<div class="small-12 cell">
 				<?php
 				while ( have_posts() ) : the_post();
